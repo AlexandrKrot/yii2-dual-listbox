@@ -8,7 +8,7 @@ use yii\helpers\Html;
 /**
  * This is just an example.
  */
-class Duallistbox extends \yii\base\Widget
+class DualListBox extends \yii\base\Widget
 {
     public $data = [];
 

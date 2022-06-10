@@ -29,3 +29,14 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 <?= \pechenki\duallistbox\AutoloadExample::widget(); ?>```
+
+```php
+ <?php
+    $data = ['item1','item2','item2'];
+    $values = [1];
+
+    echo \pechenki\duallistbox\DualListBox::widget([
+            'data'=>$data,
+            'values'=> $values
+    ]); ?>
+```
