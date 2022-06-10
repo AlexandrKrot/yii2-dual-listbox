@@ -1,0 +1,21 @@
+{
+    "name": "pechenki/yii2-dual-listbox",
+    "description": "dual listbox  widget",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Oleksandr",
+            "email": "alexandrkrot1993@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "pechenki\\duallistbox\\": ""
+        }
+    }
+}
