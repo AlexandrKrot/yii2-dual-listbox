@@ -3,18 +3,10 @@
 
 use yii\helpers\Html;
 
-echo Html::tag('select', Html::renderSelectOptions($values,$data), ['name' => 'box','id'=>'box']);
+echo Html::tag('select', Html::renderSelectOptions($values,$data), $options);
+$id = sprintf('#%s',$options["id"]);
 
 $js = <<<JS
- filterColumn = new DualListbox('#box', {
-        availableTitle: 'Доступні колонки',
-        selectedTitle: 'Вибрані колонки',
-        addButtonText: 'Показати >',
-        removeButtonText: '< Сховати',
-        addAllButtonText: 'Показати все >>',
-        removeAllButtonText: '<< Сховати все',
-        searchPlaceholder: 'Пошук'
-
-    });
+ filterColumn = new DualListbox('$id', $clientOptions);
 JS;
 $this->registerJs($js);

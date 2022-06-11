@@ -28,15 +28,22 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \pechenki\duallistbox\AutoloadExample::widget(); ?>```
-
-```php
- <?php
     $data = ['item1','item2','item2'];
     $values = [1];
 
     echo \pechenki\duallistbox\DualListBox::widget([
-            'data'=>$data,
-            'values'=> $values
+            'items'=> $data,
+            'selection'=> $values,
+            'clientOptions' => [
+                'availableTitle'=> 'Доступні колонки',
+                'selectedTitle'=> 'Вибрані колонки',
+                'addButtonText'=> 'Показати >',
+                'removeButtonText'=> '< Сховати',
+                'addAllButtonText'=> 'Показати все >>',
+                'removeAllButtonText'=> '<< Сховати все',
+                'searchPlaceholder'=> 'Пошук'
+            ]
+
     ]); ?>
 ```
+![](img.png)
